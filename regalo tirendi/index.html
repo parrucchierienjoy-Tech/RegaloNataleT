@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Auguri!</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url("background.jpg") center/cover no-repeat;
+            backdrop-filter: blur(2px);
+            color: #f5e6c8;
+            text-align: center;
+            font-family: "Didot", "Bodoni MT", serif;
+        }
+
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            padding: 40px 25px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            animation: fadeIn 1.4s ease forwards;
+        }
+
+        h1 {
+            font-size: 3.1rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(0,0,0,0.8);
+        }
+
+        p {
+            font-size: 1.4rem;
+            max-width: 360px;
+            margin: 0 auto 25px auto;
+            line-height: 1.6;
+        }
+
+        #gift {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+
+        #gift:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <h1>🎄 Buon Natale 🎄</h1>
+
+        <p>
+            "Anche a distanza, il Natale è più bello pensando a chi ci è caro. Ti auguro momenti di pace e gioia. Buone feste, con affetto, Lidia."… ✨
+        </p>
+
+        <img id="gift" src="gift.png" alt="Regalo" onclick="apriRegalo()" />
+    </div>
+
+<script>
+    function apriRegalo() {
+        window.location.href = "regalo.html";
+    }
+</script>
+
+</body>
+</html>
